@@ -11,9 +11,19 @@ int main() {
 	bst.insertNode("ghi");
 	bst.insertNode("def");
 	bst.insertNode("abc");
-	if (bst.searchNode("abc"));
+	if (bst.searchNode("abc"))
 		cout << "'abc' found" << endl;
 	else
 		cout << "'abc' NOT found" << endl;
+	cout << "In order:" << endl;
+	bst.displayInOrder();
+	cout << "Pre order:" << endl;
+	bst.displayPreOrder();
+	cout << "Post order:" << endl;
+	bst.displayPostOrder();
+	bst.remove("def");
+	cout << "Removed 'def':" << endl;
+	bst.displayInOrder();
+	
 	return 0;
 }
