@@ -33,7 +33,24 @@ int main() {
 	//populate BST
 	while(getline(fin, line))
 		bst.insertNode(line);
-	cout << "BST in order:" << endl;
-	bst.displayInOrder();
+	//cout << "BST in order:" << endl;
+	//bst.displayInOrder();
+	
+	//main menu
+	int choice;
+	do{
+		cout << "\nMain Menu:" << endl;    //choice display
+		cout << "[1] Add node" << endl;
+		cout << "[2] Delete node" << endl;
+		cout << "[3] Search for node" << endl;
+		cout << "[4] Modify node" << endl;	//this would be a delete & add
+		cout << "[0] Quit" << endl;
+		cout << "Choice --> ";
+		cin >> choice
+	}
+	while (choice != 0);
+	
+	
+
 	return 0;
 }
