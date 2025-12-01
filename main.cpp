@@ -6,6 +6,7 @@
 #include <string>
 #include "IntBinaryTree.h"
 using namespace std;
+
 int main() {
 	/*//testing for milestone 2
 	IntBinaryTree bst;
@@ -44,9 +45,29 @@ int main() {
 		cout << "[2] Delete node" << endl;
 		cout << "[3] Search for node" << endl;
 		cout << "[4] Modify node" << endl;	//this would be a delete & add
+		cout << "[5] Display BST" << endl;
 		cout << "[0] Quit" << endl;
 		cout << "Choice --> ";
-		cin >> choice
+		cin >> choice;
+		if (choice == 1){
+			cout << "\nEnter value for new node: ";
+			string userInput;
+			cin >> userInput;
+			bst.insertNode(userInput);
+		}
+		else if (choice == 2){
+			cout << "\nEnter node value to delete: ";
+			string userInput;
+			cin >> userInput;
+		}
+		else if (choice == 3)
+			search();
+		else if (choice == 4)
+			modify();
+		else if (choice == 5)
+			bst.displayInOrder();
+		else
+			choice = 0;
 	}
 	while (choice != 0);
 	
