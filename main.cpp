@@ -54,7 +54,7 @@ int main() {
 			string userInput;
 			cin >> userInput;
 			bst.insertNode(userInput);
-			cout >> "Node with value '" << userInput << "' added" << endl;
+			cout << "Node with value '" << userInput << "' added" << endl;
 		}
 		else if (choice == 2){
 			cout << "\nEnter node value to delete: ";
@@ -62,7 +62,7 @@ int main() {
 			cin >> userInput;
 			if (bst.searchNode(userInput)){
 				bst.remove(userInput);
-				cout >> 'Node with value '" << userInput << "' deleted" << endl;
+				cout << "Node with value '" << userInput << "' deleted" << endl;
 			}
 		}
 		else if (choice == 3){
@@ -70,9 +70,9 @@ int main() {
 			string userInput;
                         cin >> userInput;
 			if (bst.searchNode(userInput))
-				cout >> 'Node with value '" << userInput << "' found" << endl;
+				cout << "Node with value '" << userInput << "' found" << endl;
 			else
-				cout >> 'Node with value '" << userInput << "' NOT found" << endl;
+				cout << "Node with value '" << userInput << "' NOT found" << endl;
 		}
 		else if (choice == 4){
 			cout << "\nEnter node value to modify: ";
@@ -83,7 +83,7 @@ int main() {
 			cout << "\nEnter new node value to modify tree: ";
 			cin >> userInput;
 			bst.insertNode(userInput);
-			cout >> "BST successfully modified" << endl;
+			cout << "BST successfully modified" << endl;
 		}
 		else if (choice == 5)
 			bst.displayInOrder();
