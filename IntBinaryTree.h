@@ -71,7 +71,7 @@ void IntBinaryTree::destroySubTree(TreeNode *nodePtr) {
 		delete nodePtr;
 	}
 }
-// searchNode determines if a value is present in
+// searchNode determines if a string is present in
 // the tree. If so, the function returns true.
 // Otherwise, it returns false.
 bool IntBinaryTree::searchNode(string val) {
@@ -89,15 +89,15 @@ bool IntBinaryTree::searchNode(string val) {
 // remove calls deleteNode to delete the
 // node whose value member is the same as val.
 void IntBinaryTree::remove(string val) {
-	deleteNode(num, root);
+	deleteNode(val, root);
 }
 // deleteNode deletes the node whose value
-// member is the same as num.
-void IntBinaryTree::deleteNode(int num, TreeNode *&nodePtr) {
-	if (num < nodePtr->value)
-		deleteNode(num, nodePtr->left);
-	else if (num > nodePtr->value)
-		deleteNode(num, nodePtr->right);
+// member is the same as val.
+void IntBinaryTree::deleteNode(string val, TreeNode *&nodePtr) {
+	if (val < nodePtr->value)
+		deleteNode(val, nodePtr->left);
+	else if (val > nodePtr->value)
+		deleteNode(val, nodePtr->right);
 	else
 		makeDeletion(nodePtr);
 }
