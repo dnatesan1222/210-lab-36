@@ -2,10 +2,12 @@
 // IDE used: Vim/Terminal
 
 #include <iostream>
+#include <fstream>
+#include <string>
 #include "IntBinaryTree.h"
 using namespace std;
 int main() {
-	//testing for milestone 2
+	/*//testing for milestone 2
 	IntBinaryTree bst;
 	bst.insertNode("xyz");
 	bst.insertNode("ghi");
@@ -23,7 +25,15 @@ int main() {
 	bst.displayPostOrder();
 	bst.remove("def");
 	cout << "Removed 'def':" << endl;
+	bst.displayInOrder(); */
+
+	ifstream fin("codes.txt");
+	string line;
+	IntBinaryTree bst;
+	//populate BST
+	while(getline(fin, line))
+		bst.insertNode(line);
+	cout << "BST in order:" << endl;
 	bst.displayInOrder();
-	
 	return 0;
 }
